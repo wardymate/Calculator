@@ -1,11 +1,12 @@
 var Calculator = function() {
+  SCREEN_RESET = 0;
   this.screenDisplay = 0;
   this.workingNumber = 0;
   this.workingOPerator = "";
 };
 
 Calculator.prototype.numberButton = function(number){
-  if (this.screenDisplay === 0){
+  if (this.screenDisplay === SCREEN_RESET){
     this.screenDisplay = number;}
   else {
     this.screenDisplay = this.screenDisplay*10+number;
@@ -14,7 +15,7 @@ Calculator.prototype.numberButton = function(number){
 
 Calculator.prototype.actionButton = function(action) {
   this.workingNumber = this.screenDisplay;
-  this.screenDisplay = 0;
+  this.screenDisplay = SCREEN_RESET;
   this.workingOPerator = action;
 };
 

@@ -52,7 +52,7 @@ describe ('Calculator', function (){
       expect(calculator.screenDisplay).toEqual(0);
     });
 
-     it('the equals button diaplays the result ', function() {
+     it('the equals button diaplays the result of 1 plus 1', function() {
       calculator.numberButton(1);
       calculator.actionButton("plus");
       calculator.numberButton(1);
