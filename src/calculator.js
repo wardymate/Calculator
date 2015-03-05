@@ -16,20 +16,20 @@ Calculator.prototype.numberButton = function(number){
 Calculator.prototype.actionButton = function(action) {
   this.workingNumber = this.screenDisplay;
   this.screenDisplay = SCREEN_RESET;
-  this.workingOPerator = action;
+  this.workingOperator = action;
 };
 
 Calculator.prototype.equalsButton = function() {
-  if (this.workingOPerator === "plus") {
+  if (this.workingOperator === "plus") {
     this.screenDisplay = this.workingNumber+this.screenDisplay;
   }
-  else if(this.workingOPerator === "minus") {
+  else if(this.workingOperator === "minus") {
     this.screenDisplay = this.workingNumber-this.screenDisplay;
   }
-  else if(this.workingOPerator === "times") {
+  else if(this.workingpOperator === "times") {
     this.screenDisplay = this.workingNumber*this.screenDisplay;
   }
-  else if(this.workingOPerator === "divide") {
+  else if(this.workingOperator === "divide") {
     this.screenDisplay = this.workingNumber/this.screenDisplay;
   }
 };
