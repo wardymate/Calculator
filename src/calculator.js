@@ -12,14 +12,24 @@ Calculator.prototype.numberButton = function(number){
   };
 };
 
-Calculator.prototype.plusButton = function() {
+Calculator.prototype.actionButton = function(action) {
   this.workingNumber = this.screenDisplay;
   this.screenDisplay = 0;
-  this.workingOPerator = "plus";
+  this.workingOPerator = action;
 };
 
 Calculator.prototype.equalsButton = function() {
   if (this.workingOPerator === "plus") {
-    this.screenDisplay = this.screenDisplay+this.workingNumber;
+    this.screenDisplay = this.workingNumber+this.screenDisplay;
+  }
+  else if(this.workingOPerator === "minus") {
+    this.screenDisplay = this.workingNumber-this.screenDisplay;
+  }
+  else if(this.workingOPerator === "times") {
+    this.screenDisplay = this.workingNumber*this.screenDisplay;
+  }
+  else if(this.workingOPerator === "divide") {
+    this.screenDisplay = this.workingNumber/this.screenDisplay;
   }
 };
+
