@@ -52,7 +52,7 @@ describe ('Calculator', function (){
       expect(calculator.screenDisplay).toEqual(0);
     });
 
-     it('the equals button diaplays the result of 1 plus 1', function() {
+     it('the equals button displays the result of 1 plus 1', function() {
       calculator.numberButton(1);
       calculator.actionButton("plus");
       calculator.numberButton(1);
@@ -60,7 +60,7 @@ describe ('Calculator', function (){
       expect(calculator.screenDisplay).toEqual(2);
     });
 
-     it('the equals button diaplays the result of 5 minus 3', function() {
+     it('the equals button displays the result of 5 minus 3', function() {
       calculator.numberButton(5);
       calculator.actionButton("minus");
       calculator.numberButton(3);
@@ -68,7 +68,7 @@ describe ('Calculator', function (){
       expect(calculator.screenDisplay).toEqual(2);
     });
 
-     it('the equals button diaplays the result of 5 times 3', function() {
+     it('the equals button displays the result of 5 times 3', function() {
       calculator.numberButton(5);
       calculator.actionButton("times");
       calculator.numberButton(3);
@@ -76,7 +76,7 @@ describe ('Calculator', function (){
       expect(calculator.screenDisplay).toEqual(15);
     });
 
-     it('the equals button diaplays the result of 15 divide 3', function() {
+     it('the equals button displays the result of 15 divide 3', function() {
       calculator.numberButton(15);
       calculator.actionButton("divide");
       calculator.numberButton(3);
@@ -85,5 +85,8 @@ describe ('Calculator', function (){
     });
   });
 
+  describe('clear buttons', function() {
+
+  });
 
 });

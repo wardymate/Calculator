@@ -6,9 +6,7 @@
 
 </head>
 <body>
-<section>
-??
-</section>
+<h1 id="display">??</h1>
 
 <table id="holder">
     <tr>
@@ -27,7 +25,7 @@
       <td id="threebutton" class="button"><a href="#">3</a></td>
       <td id="twobutton" class="button"><a href="#">2</a></td>
       <td id="onebutton" class="button"><a href="#">1</a></td>
-      <td id="multiplybutton" class="button"><a href="#">*</a></td>
+      <td id="timesbutton" class="button"><a href="#">*</a></td>
     </tr>
     <tr>
       <td id="zerobutton" class="button"><a href="#">0</a></td>
@@ -41,9 +39,105 @@
 <script>
 var calculator = new Calculator();
 $(document).ready(function(){
+  $('#display').text(calculator.screenDisplay);
+});
 
+$('#sevenbutton').on('click', function(e) {
+  calculator.numberButton(7);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
 
-};
+$('#eightbutton').on('click', function(e) {
+  calculator.numberButton(8);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#ninebutton').on('click', function(e) {
+  calculator.numberButton(9);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#sixbutton').on('click', function(e) {
+  calculator.numberButton(6);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#fivebutton').on('click', function(e) {
+  calculator.numberButton(5);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#fourbutton').on('click', function(e) {
+  calculator.numberButton(4);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#threebutton').on('click', function(e) {
+  calculator.numberButton(3);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#twobutton').on('click', function(e) {
+  calculator.numberButton(2);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#onebutton').on('click', function(e) {
+  calculator.numberButton(1);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#zerobutton').on('click', function(e) {
+  calculator.numberButton(0);
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#plusbutton').on('click', function(e){
+  calculator.actionButton("plus");
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#minusbutton').on('click', function(e){
+  calculator.actionButton("minus");
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#timesbutton').on('click', function(e){
+  calculator.actionButton("times");
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#dividebutton').on('click', function(e){
+  calculator.actionButton("divide");
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#equalsbutton').on('click', function(e){
+  calculator.equalsButton();
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
+$('#clearbutton').on('click', function(e){
+
+  e.preventDefault();
+  $('#display').text(calculator.screenDisplay);
+});
+
 </script>
 
 

@@ -1,15 +1,16 @@
 var Calculator = function() {
   SCREEN_RESET = 0;
+  BASE_NUMBER = 10;
   this.screenDisplay = 0;
   this.workingNumber = 0;
-  this.workingOPerator = "";
+  this.workingOperator = "";
 };
 
 Calculator.prototype.numberButton = function(number){
   if (this.screenDisplay === SCREEN_RESET){
     this.screenDisplay = number;}
   else {
-    this.screenDisplay = this.screenDisplay*10+number;
+    this.screenDisplay = this.screenDisplay*BASE_NUMBER+number;
   };
 };
 
@@ -26,7 +27,7 @@ Calculator.prototype.equalsButton = function() {
   else if(this.workingOperator === "minus") {
     this.screenDisplay = this.workingNumber-this.screenDisplay;
   }
-  else if(this.workingpOperator === "times") {
+  else if(this.workingOperator === "times") {
     this.screenDisplay = this.workingNumber*this.screenDisplay;
   }
   else if(this.workingOperator === "divide") {
